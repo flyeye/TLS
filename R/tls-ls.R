@@ -1,3 +1,22 @@
+#' Calculate TLS or OLS solution
+#' @param mode - type of solution, 1 - SVD, 2 - eigen values
+#' @param scaling - sort of scaling in case of TLS solution, bit mask: 0 - no scaling, 1 - by rows, 2 - by columns, 3 - Frobenian
+#' @param ef - error-free variables qty
+#' @param In - equations, In(n,m)
+#' @param y - observations, y(n)
+#'  
+#' @return List of variables, where  
+#'   X - solution, X(m);
+#'   E - discripency, E(n);
+#'   S - Singular Values or eigen values, depends on mode, S(m+1);
+#'   Corr - covariance matrix or corrilation matrix, Corr(m,m);
+#'   s0 - mean square deviation of the model;
+#'   s0_dis - mean square deviation of the solution by discripency; 
+#'   s_X - solution errors, s_X(m);
+#'   err - error code or condition number;
+#'   
+#'     
+#' @export 
 TLS_Gen <- function (In, y, mode = 1, scaling = 0, ef = 0)
 {
   # m - variables qty

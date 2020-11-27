@@ -1,0 +1,12 @@
+Package: TLS
+Title: Total Least Squares method in R
+Version: 1.0.0.9000
+Authors@R: person("Alexey", "Popov", email = "9141866@gmail.com", role = c("aut", "cre"))
+Author: Alexey V. Popov
+Maintainer: Alexey V. Popov <9141866@gmail.com>
+Description: Package provides functions of Total and Ordinary Least Squares methods.
+Depends: R (>= 3.4.1)
+License: MIT + file LICENSE
+Encoding: CP1251
+LazyData: true
+RoxygenNote: 6.0.1
